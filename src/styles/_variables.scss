@@ -2,3 +2,18 @@ $bgColor: #040714;
 $colorTextPrimary: silver;
 $colorTextSecondary: #f9f9f9;
 $bgButtonPrimary: #6421ff;
+
+//mixins
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $colorTextPrimary
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: $colorTextSecondary;
+}
+
+

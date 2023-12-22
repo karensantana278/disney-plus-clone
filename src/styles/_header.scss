@@ -25,12 +25,20 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 768px){
+            padding: 0 12px 0 20px;
+        }
     }
 
     &__logo{
         max-width: 80px;
         width: 100%;
         transition: opacity .5 ease;
+
+        @media (max-width: 768px){
+            max-width: 64px;
+        }
     }
 
     &__links{
@@ -39,10 +47,18 @@
         &__item{
             margin-right: 5px;
             transition: opacity .5 ease;
-            a{
+            .button{
                 margin: 5px !important;
                 color: variables.$colorTextSecondary;
                 text-decoration: none;
+
+                
+                @media (max-width: 768px){
+                    font-size: 13px;
+                    padding: 8px 11px;
+                    height: 40px;
+                    letter-spacing: 0;
+                }
             }
         }
     }

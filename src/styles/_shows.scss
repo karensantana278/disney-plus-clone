@@ -7,6 +7,12 @@
         display: flex;
         justify-content: center;
 
+        @media (max-width: 768px) {
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 20px;
+        }
+
         &__button{
             color: variables.$colorTextSecondary;
             background: none;
@@ -21,6 +27,10 @@
             &--active{
                 border-color: variables.$colorTextSecondary;
             }
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
     }
 
@@ -29,6 +39,10 @@
         display: none;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
+
+        @media(max-width: 768px){
+            grid-template-columns: 1fr 1fr;
+        }
 
         &--active{
             display: grid;

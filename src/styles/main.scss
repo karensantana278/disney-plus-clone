@@ -33,26 +33,51 @@ body{
 
 .text--big{
     @include variables.text(18px);
+
+    @media(max-width: 768px){
+        @include variables.text(15px);
+    }
 }
 
 .text--small{
     @include variables.text(12px);
+
+    @media(max-width: 768px){
+        @include variables.text(11px);
+    }
 }
 
 .text{
     @include variables.text;
+
+    @media(max-width: 768px){
+        @include variables.text(14px);
+    }
 }
 
 .title--big{
     @include variables.title(44px);
+
+    @media(max-width: 768px){
+        @include variables.title(26px);
+    }
 }
 
 .title{
     @include variables.title;
+
+    @media(max-width: 768px){
+        @include variables.title(24px);
+    }
+
 }
 
 .title--small{
     @include variables.title(28px);
+
+    @media(max-width: 768px){
+        @include variables.title(22px);
+    }
 }
 
 .link-text{
@@ -110,6 +135,10 @@ body{
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
+    @media(max-width: 768px){
+       display: block;
+    }
+
     img{
         max-width: 100%;
     }
@@ -139,6 +168,12 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            @media(max-width: 768px){
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
 
 
             .title--small{

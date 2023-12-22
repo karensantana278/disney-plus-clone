@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'header';
 @use 'hero';
 @use 'shows';
 @use 'plans';
@@ -60,24 +61,48 @@ body{
     text-decoration: underline;
 }
 
-.buttonPrimary{
+.button{
     display: block;
     width: 100%;
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 18px;
-    color: variables.$colorTextSecondary;
-    background-color: variables.$bgButtonPrimary;
+    padding: 8px 14px;
     text-transform: uppercase;
-    border: none;
+    border: 1px solid variables.$colorTextSecondary ;
     border-radius: 4px;
     cursor: pointer;
+    color: variables.$colorTextSecondary;
+    
     margin-top: 2vw;
     margin-bottom: 8px;
 
     &:hover{
         filter: brightness(1.2);
     }
+
+    &--primary{
+        background-color: variables.$bgButtonPrimary;
+        border-color: variables.$bgButtonPrimary;
+    }
+
+    &--secondary{
+        background-color: variables.$bgButtonSecondary ;
+        border-color:variables.$bgButtonSecondary  ;
+    }
+
+    &--ternary{
+        background-color: variables.$bgButtonTernary;
+        &:hover{
+            background-color: variables.$colorTextSecondary;
+            color: variables.$bgColor;
+        }
+    }
+
 }
+
 
 .image-text-section{
     padding: 5.6vw;
